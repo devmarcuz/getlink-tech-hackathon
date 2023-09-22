@@ -1,0 +1,832 @@
+.register {
+  background: #150e28;
+  padding-top: 63px;
+  position: relative;
+}
+.register .bar {
+  display: none;
+}
+.register .lens-repo {
+  display: none;
+}
+.register .prev-page-caret {
+  display: none;
+}
+.register header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 128px;
+  padding-bottom: 25px;
+}
+.register header .next-page-caret {
+  display: none;
+}
+.register header .logo h2 {
+  font-family: "Clash Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+.register header .logo h2 span {
+  color: #d434fe;
+}
+.register header .nav-container {
+  display: flex;
+  align-items: center;
+}
+.register header .nav-container ul {
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+}
+.register header .nav-container ul li {
+  font-family: "Montserrat", sans-serif;
+  padding: 0 30px;
+}
+.register header .nav-container ul li a {
+  color: white;
+}
+.register header .nav-container ul li a.active {
+  background: linear-gradient(90deg, #903aff, #ff26b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.register header .nav-container .btn {
+  color: white;
+  width: 172px;
+  height: 53px;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register header .nav-container .btn-register {
+  color: white;
+  width: 172px;
+  height: 53px;
+  border: 2px solid;
+  -o-border-image: linear-gradient(180deg, #9a39ff 0%, #ff29b9 100%);
+     border-image: linear-gradient(180deg, #9a39ff 0%, #ff29b9 100%);
+  border-image-slice: 1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register main {
+  padding: 50px 128px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  position: relative;
+}
+.register main .lens {
+  position: absolute;
+  top: -15%;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+  pointer-events: none;
+  left: 0;
+}
+.register main .lens-2 {
+  position: absolute;
+  bottom: 0%;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+  pointer-events: none;
+  right: 0;
+}
+.register main .left-container {
+  flex: 0.45;
+  overflow-x: hidden;
+  position: relative;
+}
+.register main .left-container .star {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: blink 0.6s infinite alternate;
+}
+.register main .left-container .star-2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: blink 0.9s infinite alternate;
+}
+.register main .left-container .star-3 {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  animation: blink 1.2s infinite alternate;
+}
+.register main .left-container .vector {
+  transform: translateX(-19%);
+}
+.register main .right-container {
+  flex: 0.55;
+  position: relative;
+}
+.register main .right-container .star {
+  position: absolute;
+  right: 30%;
+  top: 5%;
+  animation: blink 0.8s infinite alternate;
+}
+.register main .right-container .star-2 {
+  position: absolute;
+  right: 20%;
+  bottom: -1%;
+  width: 15px;
+  animation: blink 1.2s infinite alternate;
+}
+.register main .right-container form {
+  background: rgba(255, 255, 255, 0.031372549);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 12px;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.register main .right-container form h1 {
+  font-family: "Clash Display", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #d434fe;
+  margin-bottom: 20px;
+}
+.register main .right-container form .vector2 {
+  display: none;
+}
+.register main .right-container form .contain .move {
+  margin-bottom: 15px;
+}
+.register main .right-container form .contain h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  margin-bottom: 30px;
+}
+.register main .right-container form .contain .error {
+  width: 100%;
+  background: #d434fe;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.register main .right-container form .contain .form {
+  width: 100%;
+}
+.register main .right-container form .contain .form .label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.register main .right-container form .contain .form .label-container:last-child {
+  margin-bottom: 10px;
+}
+.register main .right-container form .contain .form .label-container .label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 46%;
+  /* Hide the number input spinner arrows */
+  /* Hide the number input spinner arrows for Firefox */
+}
+.register main .right-container form .contain .form .label-container .label label {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.register main .right-container form .contain .form .label-container .label input {
+  background: none;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  padding: 20px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: white;
+}
+.register main .right-container form .contain .form .label-container .label input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.2509803922);
+}
+.register main .right-container form .contain .form .label-container .label input::placeholder {
+  color: rgba(255, 255, 255, 0.2509803922);
+}
+.register main .right-container form .contain .form .label-container .label input[type=number]::-webkit-inner-spin-button,
+.register main .right-container form .contain .form .label-container .label input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0; /* Remove default margin */
+}
+.register main .right-container form .contain .form .label-container .label input[type=number] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.register main .right-container form .contain .form .label-container .label .select-container {
+  position: relative;
+  width: 100%;
+}
+.register main .right-container form .contain .form .label-container .label .select-container svg {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.register main .right-container form .contain .form .label-container .label .custom-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  padding: 20px;
+  padding-right: 35px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.register main .right-container form .contain .form .label-container .label .custom-select::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.2509803922);
+}
+.register main .right-container form .contain .form .label-container .label .custom-select::placeholder {
+  color: rgba(255, 255, 255, 0.2509803922);
+}
+.register main .right-container form .contain .form .label-container .label .custom-select:focus {
+  outline: none;
+  border-color: #d434fe; /* Change the border color on focus */
+}
+.register main .right-container form .contain .form .label-container .label .custom-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Adjust the right position as needed */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #ffffff;
+  pointer-events: none;
+}
+.register main .right-container form .contain .form .label-container .label .custom-select:hover::after {
+  border-top: 6px solid #d434fe;
+}
+.register main .right-container form .contain .form .label-container .label .custom-select:focus {
+  outline: none;
+  border-color: #fff;
+}
+.register main .right-container form .contain .form .label-container .label .custom-select option {
+  background-color: #150e28;
+  padding: 15px;
+  color: white;
+}
+.register main .right-container form .contain .form .label-container .label .custom-select option span {
+  display: flex;
+  justify-content: space-between;
+}
+.register main .right-container form .contain .warning {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ff26b9;
+  margin-bottom: 20px;
+}
+.register main .right-container form .contain .agree {
+  display: flex;
+  margin-bottom: 20px;
+}
+.register main .right-container form .contain .agree .custom-checkbox input[type=checkbox] {
+  display: none;
+}
+.register main .right-container form .contain .agree .custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+.register main .right-container form .contain .agree .custom-checkbox span {
+  width: 14px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.031372549);
+  border-radius: 2px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register main .right-container form .contain .agree .custom-checkbox .checkmarked::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: none;
+}
+.register main .right-container form .contain .agree .custom-checkbox input[type=checkbox]:checked + .checkmarked::before {
+  display: block;
+}
+.register main .right-container form .contain .agree p {
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.register main .right-container form button {
+  color: white;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 53px;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .register {
+    overflow-x: hidden;
+    position: relative;
+  }
+  .register .lens-repo {
+    display: block;
+    position: absolute;
+    top: 0%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+  }
+  .register header {
+    display: none;
+    padding: 0 38px;
+    padding-bottom: 25px;
+  }
+  .register header .next-page-caret {
+    display: block;
+  }
+  .register header .logo {
+    display: none;
+  }
+  .register header .nav-container {
+    display: none;
+  }
+  .register main {
+    padding: 50px 54px;
+    padding-top: 0;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .register main .lens {
+    display: none;
+  }
+  .register main .lens-2 {
+    display: none;
+  }
+  .register main .left-container {
+    width: 100%;
+    display: none;
+  }
+  .register main .right-container {
+    flex: 0.55;
+    width: 100%;
+  }
+  .register main .right-container .star {
+    position: absolute;
+    right: 30%;
+    top: 5%;
+    width: 12px;
+    animation: blink 0.8s infinite alternate;
+  }
+  .register main .right-container .star-2 {
+    position: absolute;
+    right: 20%;
+    bottom: -1%;
+    width: 15px;
+    animation: blink 1.2s infinite alternate;
+  }
+  .register main .right-container form {
+    background: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
+    border-radius: 12px;
+    padding: 0px;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+  .register main .right-container form h1 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #d434fe;
+    margin-bottom: 20px;
+  }
+  .register main .right-container form .vector2 {
+    display: block;
+    margin: 20px 0;
+  }
+  .register main .right-container form .contain .move {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .register main .right-container form .contain h2 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .register main .right-container form .contain .form {
+    width: 100%;
+  }
+  .register main .right-container form .contain .form .label-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .register main .right-container form .contain .form .label-container.select .label {
+    width: 55%;
+    margin-bottom: 10px;
+  }
+  .register main .right-container form .contain .form .label-container.select .label:nth-child(2) {
+    width: 40%;
+  }
+  .register main .right-container form .contain .form .label-container:last-child {
+    margin-bottom: 10px;
+  }
+  .register main .right-container form .contain .form .label-container .label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  .register main .right-container form .contain .form .label-container .label label {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .register main .right-container form .contain .form .label-container .label input {
+    background: none;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .register main .right-container form .contain .form .label-container .label .select-container {
+    position: relative;
+    width: 100%;
+  }
+  .register main .right-container form .contain .form .label-container .label .select-container svg {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+  .register main .right-container form .contain .form .label-container .label .custom-select {
+    padding: 15px;
+    padding-right: 30px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .register main .right-container form .contain .warning {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+    font-style: italic;
+    color: #ff26b9;
+    margin-bottom: 20px;
+  }
+  .register main .right-container form .contain .agree {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .register main .right-container form .contain .agree p {
+    margin-left: 15px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .register main .right-container form button {
+    margin: 0 auto;
+    color: white;
+    outline: none;
+    border: none;
+    width: 65%;
+    height: 53px;
+    border-radius: 4px;
+    background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .register {
+    overflow-x: hidden;
+  }
+  .register header {
+    padding: 0 78px;
+    padding-bottom: 25px;
+  }
+  .register header .logo h2 {
+    font-size: 30px;
+  }
+  .register header .nav-container ul {
+    padding-right: 20px;
+  }
+  .register header .nav-container ul li {
+    padding: 0 10px;
+  }
+  .register header .nav-container .btn-register {
+    width: 132px;
+    height: 43px;
+  }
+  .register main {
+    padding: 50px 78px;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .register main .lens {
+    position: absolute;
+    top: -15%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+  }
+  .register main .lens-2 {
+    position: absolute;
+    bottom: 0%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    right: -2%;
+  }
+  .register main .left-container {
+    flex: 0.45;
+  }
+  .register main .left-container .star {
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: blink 0.6s infinite alternate;
+  }
+  .register main .left-container .star-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: blink 0.9s infinite alternate;
+  }
+  .register main .left-container .star-3 {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    animation: blink 1.2s infinite alternate;
+  }
+  .register main .left-container .vector {
+    transform: translateX(0%);
+  }
+  .register main .right-container {
+    flex: 0.55;
+    width: 100%;
+  }
+  .register main .right-container .star {
+    position: absolute;
+    right: 30%;
+    top: 5%;
+    animation: blink 0.8s infinite alternate;
+  }
+  .register main .right-container .star-2 {
+    position: absolute;
+    right: 20%;
+    bottom: -1%;
+    width: 15px;
+    animation: blink 1.2s infinite alternate;
+  }
+  .register main .right-container form {
+    background: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
+    border-radius: 12px;
+    padding: 0px;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .register header {
+    padding: 0 78px;
+    padding-bottom: 25px;
+  }
+  .register header .logo h2 {
+    font-size: 30px;
+  }
+  .register header .nav-container ul {
+    padding-right: 20px;
+  }
+  .register header .nav-container ul li {
+    padding: 0 10px;
+  }
+  .register header .nav-container .btn-register {
+    width: 132px;
+    height: 43px;
+  }
+  .register main {
+    padding: 50px 78px;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .register main .lens {
+    position: absolute;
+    top: -15%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+  }
+  .register main .lens-2 {
+    position: absolute;
+    bottom: 0%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    right: 0;
+  }
+  .register main .left-container {
+    flex: 0.45;
+  }
+  .register main .left-container .star {
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: blink 0.6s infinite alternate;
+  }
+  .register main .left-container .star-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: blink 0.9s infinite alternate;
+  }
+  .register main .left-container .star-3 {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    animation: blink 1.2s infinite alternate;
+  }
+  .register main .left-container .vector {
+    transform: translateX(0%);
+  }
+  .register main .right-container {
+    flex: 0.55;
+    width: 100%;
+  }
+  .register main .right-container .star {
+    position: absolute;
+    right: 30%;
+    top: 5%;
+    animation: blink 0.8s infinite alternate;
+  }
+  .register main .right-container .star-2 {
+    position: absolute;
+    right: 20%;
+    bottom: -1%;
+    width: 15px;
+    animation: blink 1.2s infinite alternate;
+  }
+  .register main .right-container form {
+    background: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
+    border-radius: 12px;
+    padding: 0px;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .register header {
+    padding: 0 78px;
+    padding-bottom: 25px;
+  }
+  .register header .logo h2 {
+    font-size: 36px;
+  }
+  .register header .nav-container ul {
+    padding-right: 50px;
+  }
+  .register header .nav-container ul li {
+    padding: 0 15px;
+  }
+  .register header .nav-container .btn {
+    width: 152px;
+  }
+  .register main {
+    padding: 50px 78px;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .register main .lens {
+    position: absolute;
+    top: -15%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+  }
+  .register main .lens-2 {
+    position: absolute;
+    bottom: 0%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    right: 0;
+  }
+  .register main .left-container {
+    flex: 0.45;
+  }
+  .register main .left-container .star {
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: blink 0.6s infinite alternate;
+  }
+  .register main .left-container .star-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: blink 0.9s infinite alternate;
+  }
+  .register main .left-container .star-3 {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    animation: blink 1.2s infinite alternate;
+  }
+  .register main .left-container .vector {
+    transform: translateX(0%);
+  }
+  .register main .right-container {
+    flex: 0.55;
+    width: 100%;
+  }
+  .register main .right-container .star {
+    position: absolute;
+    right: 30%;
+    top: 5%;
+    animation: blink 0.8s infinite alternate;
+  }
+  .register main .right-container .star-2 {
+    position: absolute;
+    right: 20%;
+    bottom: -1%;
+    width: 15px;
+    animation: blink 1.2s infinite alternate;
+  }
+  .register main .right-container form {
+    background: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
+    border-radius: 12px;
+    padding: 0px;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=Register.css.map */

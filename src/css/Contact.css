@@ -1,0 +1,577 @@
+.contact {
+  background: #150e28;
+  padding-top: 63px;
+  position: relative;
+}
+.contact .bar {
+  display: none;
+}
+.contact .lens-repo {
+  display: none;
+}
+.contact .prev-page-caret {
+  display: none;
+}
+.contact header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 128px;
+  padding-bottom: 25px;
+}
+.contact header .next-page-caret {
+  display: none;
+}
+.contact header .logo h2 {
+  font-family: "Clash Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+.contact header .logo h2 span {
+  color: #d434fe;
+}
+.contact header .nav-container {
+  display: flex;
+  align-items: center;
+}
+.contact header .nav-container ul {
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+}
+.contact header .nav-container ul li {
+  font-family: "Montserrat", sans-serif;
+  padding: 0 30px;
+}
+.contact header .nav-container ul li a {
+  color: white;
+}
+.contact header .nav-container ul li a.active {
+  background: linear-gradient(90deg, #903aff, #ff26b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.contact header .nav-container .btn {
+  color: white;
+  width: 172px;
+  height: 53px;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact main {
+  padding: 100px 188px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  position: relative;
+}
+.contact main .lens {
+  position: absolute;
+  top: -15%;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+  pointer-events: none;
+  left: 0;
+}
+.contact main .len {
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.contact main .star {
+  left: 13%;
+  top: 10%;
+  position: absolute;
+  animation: blink 1s infinite alternate;
+}
+.contact main .left-section {
+  font-size: 16px;
+  font-weight: 400;
+  flex: 0.4;
+}
+.contact main .left-section h2 {
+  font-family: "Clash Display", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  color: #d434fe;
+}
+.contact main .left-section p {
+  margin-top: 20px;
+  line-height: 20px;
+}
+.contact main .left-section .details p:nth-child(1) {
+  width: 10%;
+}
+.contact main .left-section .details p:nth-child(2) {
+  width: 30%;
+}
+.contact main .left-section .details p:nth-child(4) {
+  width: 70%;
+}
+.contact main .left-section .media {
+  color: #d434fe;
+  margin-top: 30px;
+}
+.contact main .left-section .media .socials {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.contact main .left-section .media .socials a {
+  margin-right: 15px;
+}
+.contact main .right-section {
+  flex: 0.6;
+  position: relative;
+}
+.contact main .right-section .stars {
+  position: absolute;
+  left: -2%;
+  bottom: 15%;
+  animation: blink 0.8s infinite alternate;
+}
+.contact main .right-section .stars-2 {
+  position: absolute;
+  right: 5%;
+  top: -12%;
+  animation: blink 0.6s infinite alternate;
+}
+.contact main .right-section .stars-3 {
+  right: -10%;
+  bottom: 2%;
+  position: absolute;
+  animation: blink 1s infinite alternate;
+}
+.contact main .right-section form {
+  background: rgba(255, 255, 255, 0.031372549);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 12px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact main .right-section form h1 {
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #d434fe;
+}
+.contact main .right-section form input {
+  background: none;
+  border: 1px solid #ffffff;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  padding: 20px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: white;
+}
+.contact main .right-section form input::-moz-placeholder {
+  color: white;
+}
+.contact main .right-section form input::placeholder {
+  color: white;
+}
+.contact main .right-section form input.team {
+  display: none;
+}
+.contact main .right-section form input.topic {
+  display: none;
+}
+.contact main .right-section form textarea {
+  box-sizing: border-box;
+  margin: 30px 0;
+  resize: none;
+  background: none;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  padding: 20px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: white;
+  width: 100%;
+}
+.contact main .right-section form textarea::-moz-placeholder {
+  color: white;
+}
+.contact main .right-section form textarea::placeholder {
+  color: white;
+}
+.contact main .right-section form button {
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  color: white;
+  width: 172px;
+  height: 53px;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .contact {
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .contact .lens-repo {
+    display: block;
+    position: absolute;
+    top: 0%;
+    mix-blend-mode: lighten;
+    opacity: 0.4;
+    pointer-events: none;
+    left: 0;
+  }
+  .contact header {
+    padding: 0 38px;
+    padding-bottom: 25px;
+  }
+  .contact header .next-page-caret {
+    display: block;
+  }
+  .contact header .logo {
+    display: none;
+  }
+  .contact header .nav-container {
+    display: none;
+  }
+  .contact main {
+    padding: 30px 38px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .contact main .lens {
+    position: absolute;
+    top: -15%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+    display: none;
+  }
+  .contact main .len {
+    position: absolute;
+    right: 0%;
+    bottom: -20%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    display: none;
+  }
+  .contact main .star {
+    left: 13%;
+    top: 10%;
+    position: absolute;
+    animation: blink 1.2s infinite alternate;
+  }
+  .contact main .left-section {
+    flex: 0.45;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .contact main .left-section h2 {
+    display: none;
+  }
+  .contact main .left-section .details {
+    display: none;
+  }
+  .contact main .left-section .media {
+    color: #d434fe;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact main .left-section .media .socials {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .contact main .left-section .media .socials a {
+    margin: 0;
+  }
+  .contact main .right-section {
+    flex: 0.55;
+    width: 100%;
+  }
+  .contact main .right-section form {
+    padding: 0px;
+    background: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact main .right-section form h1:first-child {
+    width: 70%;
+  }
+  .contact main .right-section form p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    padding: 20px 0;
+    padding-bottom: 0;
+    width: 75%;
+  }
+  .contact main .right-section form input.firstname {
+    display: none;
+  }
+  .contact main .right-section form input.team {
+    display: block;
+  }
+  .contact main .right-section form input.topic {
+    display: block;
+  }
+  .contact main .right-section form textarea {
+    box-sizing: border-box;
+    margin: 30px 0;
+    resize: none;
+    background: none;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+    padding: 20px;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+    width: 100%;
+  }
+  .contact main .right-section form textarea::-moz-placeholder {
+    color: white;
+  }
+  .contact main .right-section form textarea::placeholder {
+    color: white;
+  }
+  .contact main .right-section form button {
+    margin: 0 auto;
+    color: white;
+    width: 172px;
+    height: 53px;
+    border-radius: 4px;
+    background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .contact {
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  .contact header {
+    padding: 0 78px;
+    padding-bottom: 25px;
+  }
+  .contact header .logo h2 {
+    font-size: 30px;
+  }
+  .contact header .nav-container ul {
+    padding-right: 20px;
+  }
+  .contact header .nav-container ul li {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .contact header .nav-container .btn {
+    width: 122px;
+    height: 33px;
+  }
+  .contact main {
+    padding: 70px 78px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .contact main .lens {
+    position: absolute;
+    top: -15%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+  }
+  .contact main .len {
+    position: absolute;
+    right: 0%;
+    bottom: -20%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .contact main .star {
+    left: 13%;
+    top: 10%;
+    position: absolute;
+    animation: blink 1.2s infinite alternate;
+  }
+  .contact main .left-section {
+    flex: 0.45;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .contact main .right-section {
+    flex: 0.55;
+    width: 100%;
+  }
+  .contact main .right-section form {
+    padding: 40px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .contact {
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  .contact header {
+    padding: 0 78px;
+    padding-bottom: 25px;
+  }
+  .contact header .logo h2 {
+    font-size: 30px;
+  }
+  .contact header .nav-container ul {
+    padding-right: 20px;
+  }
+  .contact header .nav-container ul li {
+    padding: 0 10px;
+  }
+  .contact header .nav-container .btn {
+    width: 132px;
+    height: 43px;
+  }
+  .contact main {
+    padding: 70px 78px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .contact main .lens {
+    position: absolute;
+    top: -15%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+  }
+  .contact main .len {
+    position: absolute;
+    right: 0%;
+    bottom: -20%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .contact main .star {
+    left: 13%;
+    top: 10%;
+    position: absolute;
+    animation: blink 1.2s infinite alternate;
+  }
+  .contact main .left-section {
+    flex: 0.45;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .contact main .right-section {
+    flex: 0.55;
+    width: 100%;
+  }
+  .contact main .right-section form {
+    padding: 40px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact header {
+    padding: 0 78px;
+    padding-bottom: 25px;
+  }
+  .contact header .logo h2 {
+    font-size: 36px;
+  }
+  .contact header .nav-container ul {
+    padding-right: 50px;
+  }
+  .contact header .nav-container ul li {
+    padding: 0 15px;
+  }
+  .contact header .nav-container .btn {
+    width: 152px;
+  }
+  .contact main {
+    padding: 100px 78px;
+  }
+  .contact main .lens {
+    position: absolute;
+    top: -15%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+    left: 0;
+  }
+  .contact main .len {
+    position: absolute;
+    right: 0%;
+    bottom: -10%;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .contact main .star {
+    left: 13%;
+    top: 10%;
+    position: absolute;
+    animation: blink 1.2s infinite alternate;
+  }
+  .contact main .left-section {
+    flex: 0.45;
+  }
+  .contact main .right-section {
+    flex: 0.55;
+  }
+  .contact main .right-section form {
+    padding: 50px;
+  }
+}/*# sourceMappingURL=Contact.css.map */
