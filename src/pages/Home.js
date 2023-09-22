@@ -147,7 +147,9 @@ const Home = () => {
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
-            <Link className="btn">Register</Link>
+            <Link className="btn" to="/register">
+              Register
+            </Link>
             <div className="countdown">
               <div className="time">
                 <span>{hours.toString().padStart(2, "0")}</span>H

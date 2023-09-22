@@ -130,7 +130,6 @@ const Register = () => {
                       value={name}
                       onChange={onChange}
                       placeholder="Enter the name of your group"
-                      required
                     />
                   </div>
                   <div className="label">
@@ -141,7 +140,6 @@ const Register = () => {
                       value={phone}
                       onChange={onChange}
                       placeholder="Enter your phone number"
-                      required
                     />
                   </div>
                 </div>
@@ -155,7 +153,6 @@ const Register = () => {
                       value={email}
                       onChange={onChange}
                       placeholder="Enter your email address"
-                      required
                     />
                   </div>
                   <div className="label">
@@ -166,7 +163,6 @@ const Register = () => {
                       value={topic}
                       onChange={onChange}
                       placeholder="What is your group project topic"
-                      required
                     />
                   </div>
                 </div>
@@ -180,7 +176,6 @@ const Register = () => {
                         onChange={onChange}
                         name="category"
                         value={category}
-                        required
                       >
                         <option value="">Select your category</option>[
                         {categoryArr.map((item, index) => (
@@ -212,7 +207,6 @@ const Register = () => {
                         onChange={onChange}
                         name="size"
                         value={size}
-                        required
                       >
                         <option value="">Select your group size</option>
                         {sizeArr.map((item, index) => (

@@ -48,7 +48,7 @@ const Footer = () => {
           <Link>Overview</Link>
           <Link>Timeline</Link>
           <Link>FAQs</Link>
-          <Link>Register</Link>
+          <Link to="/register">Register</Link>
           <div className="media">
             <p>Follow us</p>
             <Link>

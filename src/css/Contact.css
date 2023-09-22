@@ -164,6 +164,9 @@
   flex-direction: column;
   width: 100%;
 }
+.contact main .right-section form p {
+  display: none;
+}
 .contact main .right-section form h1 {
   font-family: "Clash Display", sans-serif;
   font-size: 20px;
@@ -353,6 +356,7 @@
     padding: 20px 0;
     padding-bottom: 0;
     width: 75%;
+    display: block;
   }
   .contact main .right-section form input.firstname {
     display: none;
