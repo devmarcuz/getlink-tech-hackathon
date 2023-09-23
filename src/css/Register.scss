@@ -440,6 +440,12 @@
           align-items: center;
           justify-content: center;
           font-family: inherit;
+          opacity: 1;
+          transition: 0.4s ease-in;
+
+          &.loading {
+            opacity: 0.5;
+          }
         }
       }
     }

@@ -15,6 +15,7 @@ const Contact = () => {
   });
   const [error, seterror] = useState("");
   const [isFixed, setIsFixed] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,10 +39,12 @@ const Contact = () => {
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     seterror("");
+    setLoading(false);
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     let data = {
       email,
@@ -61,12 +64,15 @@ const Contact = () => {
           message: "",
         });
         seterror("Message sent successfully");
+        setLoading(false);
       })
       .catch((err) => {
         if (err.message === "Request failed with status code 400") {
           seterror("Please fill all fields");
+          setLoading(false);
         } else {
           seterror("Server error");
+          setLoading(false);
         }
       });
   };
@@ -218,7 +224,13 @@ const Contact = () => {
               onChange={onChange}
               value={message}
             ></textarea>
-            <button type="submit">Submit</button>
+            {!loading ? (
+              <button type="submit">Submit</button>
+            ) : (
+              <button type="submit" className="loading">
+                Submit
+              </button>
+            )}
           </form>
         </div>
       </main>

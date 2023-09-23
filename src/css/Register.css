@@ -377,6 +377,11 @@
   align-items: center;
   justify-content: center;
   font-family: inherit;
+  opacity: 1;
+  transition: 0.4s ease-in;
+}
+.register main .right-container form button.loading {
+  opacity: 0.5;
 }
 @keyframes blink {
   0% {

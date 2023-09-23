@@ -8,6 +8,7 @@ const Register = () => {
   const [bool, setBool] = useState(false);
   const [check, setCheck] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -16,10 +17,19 @@ const Register = () => {
     category: "",
     size: "",
   });
-  const categoryArr = [0, 1, 2, 3, 4, 5];
+  const [categoryArr, setCategoryArr] = useState([]);
   const sizeArr = [0, 1, 2, 8, 9, 10];
 
   const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get("https://backend.getlinked.ai/hackathon/categories-list")
+      .then((res) => {
+        setCategoryArr(res.data);
+      })
+      .catch((err) => {});
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,24 +53,27 @@ const Register = () => {
 
   const submit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (!name || !phone || !email || !topic) {
       setError("Please fill all the fields");
-      return;
+      setLoading(false);
     } else if (!category) {
       setError("Select a category");
-      return;
+      setLoading(false);
     } else if (!size) {
       setError("Select a group size");
+      setLoading(false);
     } else if (!check) {
       setError("Accept the privacy policy");
+      setLoading(false);
     } else {
       let data = {
         team_name: name,
         phone_number: phone,
         email,
         project_topic: topic,
-        category: 3,
+        category: parseInt(category),
         group_size: parseInt(size),
         privacy_policy_accepted: check,
       };
@@ -68,6 +81,7 @@ const Register = () => {
       axios
         .post(apiUrl, data)
         .then((res) => {
+          setLoading(false);
           setBool(true);
           setFormData({
             name: "",
@@ -77,15 +91,18 @@ const Register = () => {
             category: "",
             size: "",
           });
+          setError("");
           setCheck(false);
         })
         .catch((err) => {
-          console.log();
+          setLoading(true);
+
           if (
             err.response.data.email[0] ===
             "applicant with this email already exists."
           ) {
             setError("Email already exists");
+            setLoading(false);
           } else setError("Server error");
         });
     }
@@ -94,6 +111,7 @@ const Register = () => {
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setError("");
+    setLoading(false);
   };
 
   return (
@@ -198,11 +216,12 @@ const Register = () => {
                         value={category}
                       >
                         <option value="">Select your category</option>[
-                        {categoryArr.map((item, index) => (
-                          <option value={item} key={index}>
-                            {item}
-                          </option>
-                        ))}
+                        {categoryArr.length >= 1 &&
+                          categoryArr.map((item, index) => (
+                            <option value={item.id} key={index}>
+                              {item.name}
+                            </option>
+                          ))}
                       </select>
                       <svg
                         width="13"
@@ -276,7 +295,13 @@ const Register = () => {
                 </p>
               </div>
             </div>
-            <button type="submit">Submit</button>
+            {!loading ? (
+              <button type="submit">Submit</button>
+            ) : (
+              <button type="submit" className="loading">
+                Submit
+              </button>
+            )}
           </form>
         </div>
       </main>

@@ -304,6 +304,11 @@
           align-items: center;
           justify-content: center;
           font-family: inherit;
+          opacity: 1;
+
+          &.loading {
+            opacity: 0.5;
+          }
         }
       }
     }
