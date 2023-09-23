@@ -282,6 +282,7 @@
     height: 100vh;
     position: relative;
     overflow-x: hidden;
+    padding-top: 50px;
   }
   .contact .lens-repo {
     display: block;

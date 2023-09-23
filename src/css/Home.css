@@ -1269,7 +1269,7 @@
 @media only screen and (max-width: 576px) {
   .home {
     overflow-x: hidden;
-    padding-top: 30px;
+    padding-top: 0px;
     position: relative;
   }
   .home .lens-home-repo {
@@ -1290,6 +1290,7 @@
   .home header {
     padding: 0 48px;
     padding-bottom: 25px;
+    padding-top: 30px;
   }
   .home header .logo h2 {
     font-size: 15px;
