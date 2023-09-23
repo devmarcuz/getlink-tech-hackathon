@@ -35,7 +35,6 @@ const Contact = () => {
     axios
       .post(apiUrl, data)
       .then((res) => {
-        console.log(res);
         setFormData({
           first_name: "",
           team_name: "",
@@ -47,7 +46,6 @@ const Contact = () => {
         seterror("Message sent successfully");
       })
       .catch((err) => {
-        console.log(err);
         if (err.message === "Request failed with status code 400") {
           seterror("Please fill all fields");
         } else {
