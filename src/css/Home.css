@@ -1140,6 +1140,13 @@
 .home .footer .container .useful-links a {
   color: white;
   padding-top: 20px;
+  transition: 0.2s all ease;
+}
+.home .footer .container .useful-links a:hover {
+  background: linear-gradient(90deg, #903aff, #ff26b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .home .footer .container .useful-links .media {
   padding-top: 30px;
