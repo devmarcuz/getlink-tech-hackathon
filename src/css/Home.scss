@@ -15,14 +15,17 @@
 
     .next-page-caret {
       display: none;
+      cursor: pointer;
     }
 
     .prev-page-caret {
       display: none;
+      cursor: pointer;
     }
 
     .bar {
       display: none;
+      cursor: pointer;
     }
 
     .logo {
@@ -147,20 +150,20 @@
         font-size: 36px;
         font-style: italic;
         font-weight: 700;
-        color: transparent; /* Make the text initially transparent */
-        white-space: nowrap; /* Prevent text from wrapping to the next line */
-        overflow: hidden; /* Hide overflowed text */
-        width: 0; /* Start with a width of 0 */
-        animation: typewriter 4s steps(50) forwards; /* Adjust duration and steps as needed */
+        color: transparent;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        animation: typewriter 3s steps(50) forwards;
       }
 
       @keyframes typewriter {
         from {
-          width: 0; /* Start with a width of 0 (text hidden) */
+          width: 0;
         }
         to {
-          width: 100%; /* Move to full width (text fully visible) */
-          color: white; /* Change text color to white when fully visible */
+          width: 100%;
+          color: white;
         }
       }
     }

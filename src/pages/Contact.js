@@ -1,9 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import "../css/Contact.css";
+import axios from "axios";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    first_name: "",
+    team_name: "",
+    email: "",
+    phone: "",
+    message: "",
+    topic: "",
+  });
+  const [error, seterror] = useState("");
+
+  const { first_name, email, phone, message, topic } = formData;
+  const apiUrl = "https://backend.getlinked.ai/hackathon/contact-form";
+
+  const onChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    seterror("");
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    let data = {
+      email,
+      phone_number: phone,
+      first_name,
+      message,
+    };
+    axios
+      .post(apiUrl, data)
+      .then((res) => {
+        console.log(res);
+        setFormData({
+          first_name: "",
+          team_name: "",
+          phone: "",
+          email: "",
+          topic: "",
+          message: "",
+        });
+        seterror("Message sent successfully");
+      })
+      .catch((err) => {
+        console.log(err);
+        if (err.message === "Request failed with status code 400") {
+          seterror("Please fill all fields");
+        } else {
+          seterror("Server error");
+        }
+      });
+  };
+
   return (
     <div className="contact">
       {/* <img
@@ -104,21 +156,52 @@ const Contact = () => {
           <img src="/images/stars/star (1).svg" alt="" className="stars-2" />
           <img src="/images/stars/star.svg" alt="" className="stars-3" />
 
-          <form action="">
+          <form action="" onSubmit={onSubmit}>
             <h1>
               Questions or need assistance? <br />
               Let us know about it!
             </h1>
             <p>Email us below to any question related to our event</p>
-            <input type="text" placeholder="First Name" className="firstname" />
-            <input type="text" placeholder="Team Name" className="team" />
-            <input type="text" placeholder="Topic" className="topic" />
-            <input type="email" name="email" id="" placeholder="Mail" />
+            {error && <div className="error">{error}</div>}
+            <input
+              type="text"
+              placeholder="First Name"
+              className="firstname"
+              name="first_name"
+              onChange={onChange}
+              value={first_name}
+            />
+            <input
+              type="text"
+              placeholder="Team Name"
+              className="team"
+              name="first_name"
+              onChange={onChange}
+              value={first_name}
+            />
+            <input
+              type="text"
+              placeholder="Topic"
+              className="topic"
+              name="topic"
+              onChange={onChange}
+              value={topic}
+            />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="Mail"
+              onChange={onChange}
+              value={email}
+            />
             <textarea
               name="message"
               id=""
               rows="6"
               placeholder="Message"
+              onChange={onChange}
+              value={message}
             ></textarea>
             <button type="submit">Submit</button>
           </form>

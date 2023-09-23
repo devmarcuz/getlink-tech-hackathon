@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import "../css/Register.css";
 import SucessModal from "../components/SucessModal";
+import axios from "axios";
 
 const Register = () => {
   const [bool, setBool] = useState(false);
@@ -36,7 +37,6 @@ const Register = () => {
     } else if (!check) {
       setError("Accept the privacy policy");
     } else {
-      console.log(check);
       let data = {
         team_name: name,
         phone_number: phone,
@@ -46,16 +46,10 @@ const Register = () => {
         group_size: parseInt(size),
         privacy_policy_accepted: check,
       };
-      fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
+
+      axios
+        .post(apiUrl, data)
+        .then((res) => {
           setBool(true);
           setFormData({
             name: "",
@@ -67,7 +61,14 @@ const Register = () => {
           });
           setCheck(false);
         })
-        .catch((err) => console.log(err.message));
+        .catch((err) => {
+          console.log(err);
+          if (err.message === "Request failed with status code 400") {
+            setError("Please fill all fields");
+          } else {
+            setError("Server error");
+          }
+        });
     }
   };
 

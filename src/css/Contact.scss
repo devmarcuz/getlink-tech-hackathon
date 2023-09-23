@@ -216,6 +216,17 @@
           color: #d434fe;
         }
 
+        .error {
+          width: 100%;
+          background: #d434fe;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 4px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          margin-top: 15px;
+        }
+
         input {
           background: none;
           border: 1px solid #ffffff;
@@ -257,6 +268,7 @@
           line-height: 20px;
           color: white;
           width: 100%;
+          outline: none;
 
           &::placeholder {
             color: white;
