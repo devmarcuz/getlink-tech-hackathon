@@ -57,7 +57,7 @@ const Register = () => {
     if (error) {
       errorRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, []);
+  }, [error]);
 
   const submit = (e) => {
     e.preventDefault();

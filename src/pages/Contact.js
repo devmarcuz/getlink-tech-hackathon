@@ -39,7 +39,7 @@ const Contact = () => {
     if (error) {
       errorRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, []);
+  }, [error]);
 
   const { first_name, email, phone, message, topic } = formData;
   const apiUrl = "https://backend.getlinked.ai/hackathon/contact-form";
