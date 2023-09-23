@@ -109,7 +109,10 @@ const Header = ({ isFixed, setIsFixed }) => {
               className={`${
                 location.search === "?section=timeline" && "active"
               }`}
-              onClick={() => setIsFixed(false)}
+              onClick={() => {
+                setIsFixed(false);
+                setBool(false);
+              }}
             >
               Timeline
             </Link>
@@ -120,7 +123,10 @@ const Header = ({ isFixed, setIsFixed }) => {
               className={`${
                 location.search === "?section=introductions" && "active"
               }`}
-              onClick={() => setIsFixed(false)}
+              onClick={() => {
+                setIsFixed(false);
+                setBool(false);
+              }}
             >
               Overview
             </Link>
@@ -131,7 +137,10 @@ const Header = ({ isFixed, setIsFixed }) => {
               className={`${
                 location.search === "?section=questions" && "active"
               }`}
-              onClick={() => setIsFixed(false)}
+              onClick={() => {
+                setIsFixed(false);
+                setBool(false);
+              }}
             >
               FAQs
             </Link>
@@ -140,7 +149,10 @@ const Header = ({ isFixed, setIsFixed }) => {
             <Link
               to="/contact"
               className={`${location.pathname === "/contact" && "active"}`}
-              onClick={() => setIsFixed(false)}
+              onClick={() => {
+                setIsFixed(false);
+                setBool(false);
+              }}
             >
               Contact
             </Link>
@@ -148,7 +160,10 @@ const Header = ({ isFixed, setIsFixed }) => {
         </ul>
         <Link
           to={"/register"}
-          onClick={() => setIsFixed(false)}
+          onClick={() => {
+            setIsFixed(false);
+            setBool(false);
+          }}
           className={` ${
             location.pathname === "/register" ? "btn-register" : "btn"
           }`}
