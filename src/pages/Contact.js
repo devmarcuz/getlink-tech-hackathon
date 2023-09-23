@@ -53,6 +53,7 @@ const Contact = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    seterror("");
 
     let data = {
       email,

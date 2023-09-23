@@ -62,6 +62,7 @@ const Register = () => {
   const submit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
 
     if (!name || !phone || !email || !topic) {
       setError("Please fill all the fields");
