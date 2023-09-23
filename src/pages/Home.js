@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../css/Home.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import IntroductionMain from "../components/home-components/IntroductionMain";
 import CriteriaMain from "../components/home-components/CriteriaMain";
@@ -29,6 +29,8 @@ const Home = () => {
   const sponsorsRef = useRef(null);
   const privacyRef = useRef(null);
   const timelineRef = useRef(null);
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,6 +108,23 @@ const Home = () => {
   const minutes = Math.floor((timeLeft % 3600) / 60);
   const seconds = timeLeft % 60;
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const section = params.get("section");
+
+    if (section === "timeline" && timelineRef.current) {
+      timelineRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (section === "questions" && questionsRef.current) {
+      questionsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (section === "introductions" && introductionRef.current) {
+      introductionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location.search]);
+
   const toggleAnimation = (index) => {
     if (index === questionActiveIndex) {
       setQuestionActiveIndex(null);
@@ -115,7 +134,7 @@ const Home = () => {
   };
   return (
     <div className="home">
-      <Header />
+      <Header timelineRef={timelineRef} />
       <img
         src="/images/Purple-Lens-Flare-PNG-home-repo.svg"
         alt=""

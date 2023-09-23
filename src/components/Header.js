@@ -95,24 +95,30 @@ const Header = () => {
         <ul>
           <li>
             <Link
-              to="/"
-              className={`${location.pathname === "/timeline" && "active"}`}
+              to="/?section=timeline"
+              className={`${
+                location.search === "?section=timeline" && "active"
+              }`}
             >
               Timeline
             </Link>
           </li>
           <li>
             <Link
-              to="/"
-              className={`${location.pathname === "/overview" && "active"}`}
+              to="/?section=introductions"
+              className={`${
+                location.search === "?section=introductions" && "active"
+              }`}
             >
               Overview
             </Link>
           </li>
           <li>
             <Link
-              to="/"
-              className={`${location.pathname === "/faqs" && "active"}`}
+              to="/?section=questions"
+              className={`${
+                location.search === "?section=questions" && "active"
+              }`}
             >
               FAQs
             </Link>
