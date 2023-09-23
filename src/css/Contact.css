@@ -296,6 +296,7 @@
   .contact header {
     padding: 0 38px;
     padding-bottom: 25px;
+    border-bottom: none;
   }
   .contact header .next-page-caret {
     display: block;
