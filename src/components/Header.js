@@ -150,8 +150,13 @@ const Header = ({ isFixed, setIsFixed }) => {
               to="/contact"
               className={`${location.pathname === "/contact" && "active"}`}
               onClick={() => {
-                setIsFixed(false);
                 setBool(false);
+                location.pathname !== "/contact" &&
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                location.pathname !== "/contact" && setIsFixed(false);
               }}
             >
               Contact
@@ -161,8 +166,13 @@ const Header = ({ isFixed, setIsFixed }) => {
         <Link
           to={"/register"}
           onClick={() => {
-            setIsFixed(false);
             setBool(false);
+            location.pathname !== "/register" &&
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            location.pathname !== "/register" && setIsFixed(false);
           }}
           className={` ${
             location.pathname === "/register" ? "btn-register" : "btn"
