@@ -80,7 +80,13 @@ const Register = () => {
           setCheck(false);
         })
         .catch((err) => {
-          setError("Server error");
+          console.log();
+          if (
+            err.response.data.email[0] ===
+            "applicant with this email already exists."
+          ) {
+            setError("Email already exists");
+          } else setError("Server error");
         });
     }
   };
