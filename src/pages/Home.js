@@ -20,6 +20,8 @@ const Home = () => {
   const [sponsorIndex, setSponsorIndex] = useState(false);
   const [privacyIndex, setPrivacyIndex] = useState(false);
   const [timeLeft, setTimeLeft] = useState(48 * 60 * 60);
+  const [overviewBool, setOverviewBool] = useState(false);
+  const [FAQs, setFAQs] = useState(false);
 
   const introductionRef = useRef(null);
   const rulesRef = useRef(null);
@@ -122,6 +124,7 @@ const Home = () => {
 
     if (section === "introductions" && introductionRef.current) {
       introductionRef.current.scrollIntoView({ behavior: "smooth" });
+      setOverviewBool(true);
     }
   }, [location.search]);
 

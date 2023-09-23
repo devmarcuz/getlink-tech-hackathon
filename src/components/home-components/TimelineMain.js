@@ -401,7 +401,7 @@ const TimelineMain = ({ timelineRef, activeIndex }) => {
       <div className="container-repo">
         <div className="contain">
           <div className="left-contain">
-            <img src="/images/line 9.svg" alt="" className="line" />
+            <div className="line"></div>
             <svg
               width="20"
               height="20"
@@ -449,7 +449,7 @@ const TimelineMain = ({ timelineRef, activeIndex }) => {
         </div>
         <div className="contain">
           <div className="left-contain">
-            <img src="/images/line 9.svg" alt="" className="line" />
+            <div className="line"></div>
             <svg
               width="20"
               height="20"
@@ -497,7 +497,7 @@ const TimelineMain = ({ timelineRef, activeIndex }) => {
         </div>
         <div className="contain">
           <div className="left-contain">
-            <img src="/images/line 9.svg" alt="" className="line" />
+            <div className="line"></div>
             <svg
               width="20"
               height="20"
@@ -542,7 +542,7 @@ const TimelineMain = ({ timelineRef, activeIndex }) => {
         </div>
         <div className="contain">
           <div className="left-contain">
-            <img src="/images/line 9.svg" alt="" className="line" />
+            <div className="line"></div>
             <svg
               width="20"
               height="20"
@@ -590,7 +590,7 @@ const TimelineMain = ({ timelineRef, activeIndex }) => {
         </div>
         <div className="contain">
           <div className="left-contain">
-            <img src="/images/line 9.svg" alt="" className="line" />
+            <div className="line"></div>
             <svg
               width="20"
               height="20"
@@ -637,7 +637,7 @@ const TimelineMain = ({ timelineRef, activeIndex }) => {
         </div>
         <div className="contain">
           <div className="left-contain">
-            <img src="/images/line 9.svg" alt="" className="line" />
+            <div className="line"></div>
             <svg
               width="20"
               height="20"

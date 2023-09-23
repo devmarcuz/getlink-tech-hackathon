@@ -1986,6 +1986,9 @@
   }
   .home .timeline-main .container-repo .contain .left-contain .line {
     margin-bottom: 5px;
+    width: 2px;
+    height: 77px;
+    background: #d434fe;
   }
   .home .timeline-main .container-repo .contain .right-contain {
     display: flex;
