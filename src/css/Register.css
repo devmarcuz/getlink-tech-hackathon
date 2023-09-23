@@ -49,6 +49,12 @@
 .register header .nav-container ul li a {
   color: white;
 }
+.register header .nav-container ul li a:hover {
+  background: linear-gradient(90deg, #903aff, #ff26b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .register header .nav-container ul li a.active {
   background: linear-gradient(90deg, #903aff, #ff26b9);
   -webkit-background-clip: text;

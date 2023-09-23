@@ -57,6 +57,13 @@
           a {
             color: white;
 
+            &:hover {
+              background: linear-gradient(90deg, #903aff, #ff26b9);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+            }
+
             &.active {
               background: linear-gradient(90deg, #903aff, #ff26b9);
               -webkit-background-clip: text;
