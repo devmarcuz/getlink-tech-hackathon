@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import "../css/Contact.css";
@@ -14,6 +14,23 @@ const Contact = () => {
     topic: "",
   });
   const [error, seterror] = useState("");
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const { first_name, email, phone, message, topic } = formData;
   const apiUrl = "https://backend.getlinked.ai/hackathon/contact-form";
@@ -66,7 +83,7 @@ const Contact = () => {
         alt=""
         className="lens-repo"
       />
-      <Header />
+      <Header isFixed={isFixed} setIsFixed={setIsFixed} />
       <main>
         <img
           src="/images/Purple-Lens-Flare-PNG-contact.svg"

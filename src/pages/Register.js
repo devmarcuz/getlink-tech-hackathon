@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import "../css/Register.css";
 import SucessModal from "../components/SucessModal";
@@ -18,6 +18,24 @@ const Register = () => {
   });
   const categoryArr = [0, 1, 2, 3, 4, 5];
   const sizeArr = [0, 1, 2, 8, 9, 10];
+
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const { name, phone, email, topic, category, size } = formData;
 
@@ -74,7 +92,7 @@ const Register = () => {
 
   return (
     <div className="register">
-      <Header />
+      <Header isFixed={isFixed} setIsFixed={setIsFixed} />
       {bool && <SucessModal setBool={setBool} />}
       <img
         src="/images/Purple-Lens-Flare-PNG-register-repo.svg"

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ isFixed, setIsFixed }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const [bool, setBool] = useState(false);
 
   return (
-    <header>
+    <header className={`${isFixed ? "fixed" : "hidden"}`}>
       <svg
         width="23"
         height="23"
@@ -44,7 +44,17 @@ const Header = () => {
       </svg>
 
       <div className="logo">
-        <h2 onClick={() => navigate("/")}>
+        <h2
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+            navigate("/");
+
+            location.pathname !== "/" && setIsFixed(false);
+          }}
+        >
           get<span>linked</span>
         </h2>
       </div>
@@ -99,6 +109,7 @@ const Header = () => {
               className={`${
                 location.search === "?section=timeline" && "active"
               }`}
+              onClick={() => setIsFixed(false)}
             >
               Timeline
             </Link>
@@ -109,6 +120,7 @@ const Header = () => {
               className={`${
                 location.search === "?section=introductions" && "active"
               }`}
+              onClick={() => setIsFixed(false)}
             >
               Overview
             </Link>
@@ -119,6 +131,7 @@ const Header = () => {
               className={`${
                 location.search === "?section=questions" && "active"
               }`}
+              onClick={() => setIsFixed(false)}
             >
               FAQs
             </Link>
@@ -127,6 +140,7 @@ const Header = () => {
             <Link
               to="/contact"
               className={`${location.pathname === "/contact" && "active"}`}
+              onClick={() => setIsFixed(false)}
             >
               Contact
             </Link>
@@ -134,6 +148,7 @@ const Header = () => {
         </ul>
         <Link
           to={"/register"}
+          onClick={() => setIsFixed(false)}
           className={` ${
             location.pathname === "/register" ? "btn-register" : "btn"
           }`}

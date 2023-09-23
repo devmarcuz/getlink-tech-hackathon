@@ -1,6 +1,5 @@
 .register {
   background: #150e28;
-  padding-top: 63px;
   position: relative;
 
   .bar {
@@ -22,6 +21,20 @@
     justify-content: space-between;
     padding: 0 128px;
     padding-bottom: 25px;
+    padding-top: 63px;
+    transition: 0.4s ease-in;
+    border-bottom: 1px solid #ffffff2e;
+
+    &.fixed {
+      padding-top: 20px;
+      background: rgba(255, 255, 255, 0.093); /* Semi-transparent white */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      backdrop-filter: blur(10px);
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+    }
 
     .next-page-caret {
       display: none;
@@ -688,6 +701,7 @@
       header {
         padding: 0 78px;
         padding-bottom: 25px;
+        padding-top: 63px;
 
         .logo {
           h2 {
@@ -801,6 +815,7 @@
       header {
         padding: 0 78px;
         padding-bottom: 25px;
+        padding-top: 63px;
 
         .logo {
           h2 {
@@ -914,6 +929,7 @@
       header {
         padding: 0 78px;
         padding-bottom: 25px;
+        padding-top: 63px;
 
         .logo {
           h2 {
