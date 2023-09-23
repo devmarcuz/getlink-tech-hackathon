@@ -357,6 +357,7 @@
   font-weight: 400;
 }
 .register main .right-container form button {
+  cursor: pointer;
   color: white;
   outline: none;
   border: none;

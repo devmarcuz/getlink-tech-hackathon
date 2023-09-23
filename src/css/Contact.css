@@ -233,6 +233,7 @@
   color: white;
 }
 .contact main .right-section form button {
+  cursor: pointer;
   margin: 0 auto;
   border: none;
   outline: none;
