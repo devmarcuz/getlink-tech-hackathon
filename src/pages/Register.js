@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import "../css/Register.css";
 import SucessModal from "../components/SucessModal";
@@ -21,6 +21,8 @@ const Register = () => {
   const sizeArr = [0, 1, 2, 8, 9, 10];
 
   const [isFixed, setIsFixed] = useState(false);
+
+  const errorRef = useRef();
 
   useEffect(() => {
     axios
@@ -50,6 +52,12 @@ const Register = () => {
   const { name, phone, email, topic, category, size } = formData;
 
   const apiUrl = "https://backend.getlinked.ai/hackathon/registration";
+
+  useEffect(() => {
+    if (error) {
+      errorRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
   const submit = (e) => {
     e.preventDefault();
@@ -103,7 +111,9 @@ const Register = () => {
           ) {
             setError("Email already exists");
             setLoading(false);
-          } else setError("Server error");
+          } else {
+            setError("Server error");
+          }
         });
     }
   };
@@ -157,7 +167,11 @@ const Register = () => {
             <div className="contain">
               <img src="/images/Part of move.svg" alt="" className="move" />
               <h2>CREATE YOUR ACCOUNT</h2>
-              {error && <p className="error">{error}</p>}
+              {error && (
+                <p className="error" ref={errorRef}>
+                  {error}
+                </p>
+              )}
               <div className="form">
                 <div className="label-container">
                   <div className="label">

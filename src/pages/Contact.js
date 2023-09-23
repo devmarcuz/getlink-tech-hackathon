@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import "../css/Contact.css";
@@ -17,6 +17,8 @@ const Contact = () => {
   const [isFixed, setIsFixed] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const errorRef = useRef();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -31,6 +33,12 @@ const Contact = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    if (error) {
+      errorRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, []);
 
   const { first_name, email, phone, message, topic } = formData;
@@ -183,7 +191,11 @@ const Contact = () => {
               Let us know about it!
             </h1>
             <p>Email us below to any question related to our event</p>
-            {error && <div className="error">{error}</div>}
+            {error && (
+              <div className="error" ref={errorRef}>
+                {error}
+              </div>
+            )}
             <input
               type="text"
               placeholder="First Name"
