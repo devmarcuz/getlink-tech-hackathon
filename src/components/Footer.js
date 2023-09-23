@@ -45,9 +45,9 @@ const Footer = () => {
         <div className="useful-links">
           <img src="/images/stars/star (1).svg" alt="" className="stars" />
           <h2>Useful Links</h2>
-          <Link>Overview</Link>
-          <Link>Timeline</Link>
-          <Link>FAQs</Link>
+          <Link to="/?section=introductions">Overview</Link>
+          <Link to="/?section=timeline">Timeline</Link>
+          <Link to="/?section=questions">FAQs</Link>
           <Link to="/register">Register</Link>
           <div className="media">
             <p>Follow us</p>
