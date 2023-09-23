@@ -636,6 +636,7 @@
             transition: 0.3s all ease-in-out;
             transform-origin: bottom;
             margin-bottom: 15px;
+            transition: 0.3s all ease-in-out;
 
             p:first-child {
               margin-bottom: 10px;
@@ -646,10 +647,11 @@
               color: rgba(255, 255, 255, 0.836);
               width: 95%;
               opacity: 0;
+              transition: 0.3s all ease-in-out;
             }
 
             &.animate {
-              height: 70px;
+              height: 80px;
 
               .answer {
                 opacity: 1;
@@ -2046,14 +2048,14 @@
                 }
 
                 .answer {
-                  font-size: 14px;
+                  font-size: 13px;
                   color: rgba(255, 255, 255, 0.836);
                   width: 95%;
                   opacity: 0;
                 }
 
                 &.animate {
-                  height: 70px;
+                  height: 100px;
 
                   .answer {
                     opacity: 1;
