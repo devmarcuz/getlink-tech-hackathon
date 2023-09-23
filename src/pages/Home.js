@@ -203,7 +203,7 @@ const Home = () => {
           <div className="vector-svg">
             <img src="/images/metrix 1.svg" alt="" className="metrix" />
             <img
-              src="/images/man-wearing-smart-glasses-touching-virtual-screen 1.svg"
+              src="/images/man-wearing-smart-glasses-touching-virtual-screen 1.png"
               alt=""
               className="man"
             />
