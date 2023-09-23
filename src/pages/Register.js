@@ -62,12 +62,7 @@ const Register = () => {
           setCheck(false);
         })
         .catch((err) => {
-          console.log(err);
-          if (err.message === "Request failed with status code 400") {
-            setError("Please fill all fields");
-          } else {
-            setError("Server error");
-          }
+          setError("Server error");
         });
     }
   };
